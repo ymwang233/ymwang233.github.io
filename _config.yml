@@ -11,6 +11,15 @@ owner:
   name: " yphuang"
   email: "huangypatgx@gmail.com"
   bio: ""
+  
+author:
+  name: 黄耀鹏      # 作者名称
+  email: huangypatgx@gmail.com # 邮箱地址
+    #weibo: 2917650677  # weibo ID
+  github: brightbird  # github ID
+    #linkedin: chrispher-guan/5a/a68/6b8 # linkedIn ID
+    #gplus: 110552447039675960964  # G+ ID 
+  logo: https://github.com/yphuang/yphuang.github.io/blob/master/img/favicon.ico.png # logo地址
 
 # Data
 gavatar: http://dreamofbook.qiniudn.com/Az..png
