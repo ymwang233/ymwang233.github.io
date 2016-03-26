@@ -50,9 +50,9 @@ defaults:
 comments :
   provider : duoshuo
   duoshuo :
-    short_name : cnfeat
+    short_name : yphuang
   disqus :
-      short_name : cnfeat
+      short_name : yphuang
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: 
