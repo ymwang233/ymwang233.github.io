@@ -70,5 +70,6 @@ footer-links-active:
   github: true
   linkedin: false
   stackoverflow: false
-  
-  url-pretty: "huangypatgx@gmail.com"
+
+#   
+url-pretty: "huangypatgx@gmail.com"
