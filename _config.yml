@@ -9,7 +9,7 @@ url: "http://yphuang.github.io"
 # About/contact
 owner: 
   name: " yphuang"
-  email: brightbirdhuang@gmail.com
+  email: "huangypatgx@gmail.com"
   bio: ""
 
 # Data
@@ -61,3 +61,12 @@ google_verify:
 bing_verify:
 
 # Links to include in footer navigation
+footer-links-active:
+  rss: true
+  zhihu: true
+  facebook: false
+  email: true
+  twitter: false
+  github: true
+  linkedin: false
+  stackoverflow: false
