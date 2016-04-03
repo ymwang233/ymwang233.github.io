@@ -45,7 +45,7 @@ header-img: "img/whale_AboutMe.jpg"
 - [博客](http://yphuang.github.io/about/)
 - [知乎@黄耀鹏](https://www.zhihu.com/people/brightbirdhuang)
 
-
+- E-mail:huangypatgx@gmail.com
 
 
 
