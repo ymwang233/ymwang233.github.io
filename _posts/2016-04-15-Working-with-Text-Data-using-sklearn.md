@@ -2,7 +2,7 @@
 layout: post
 title: "使用scikit-learn进行文本分类"
 author: "yphuang"
-date: "2016-03-21"
+date: "2016-04-15"
 categories: blog
 tags: [Python,文本分类,scikit-learn]
 
