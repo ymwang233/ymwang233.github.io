@@ -4,7 +4,7 @@ title: "使用scikit-learn实现多类别及多标签分类算法"
 author: "yphuang"
 date: "2016-04-22"
 categories: blog
-tags: [Python,多标签分类,多类别分类,scikit-learn]
+tags: [Python,多标签分类,scikit-learn]
 
 ---
 # 使用scikit-learn实现多类别及多标签分类算法
