@@ -79,8 +79,9 @@ $$
 $$
 
 
+
 <center>
-    <p><img src="https://raw.githubusercontent.com/yphuang/yphuang.github.io/figure/2016-04-05-Decision-Tree-Implementation-in-Python/Entropy_example.png"  align="center"></p>
+    <p><img src="https://raw.githubusercontent.com/yphuang/yphuang.github.io/figure/2016-04-05-Decision-Tree-Implementation-in-Python/Entropy_example.png" align="center"></p>
 </center>
 
 
@@ -90,11 +91,15 @@ $$
 
 #### 条件熵(conditional entropy)
 
+
+
 随机变量$$X$$给定的条件下，随机变量$$Y$$的条件熵$$H(Y|X)$$定义为：
+
 
 $$
 H(Y|X) = \sum_{i=1}^{n}p_i H(Y|X=x_i)
 $$
+
 
 其中，$$p_i = P(X = x_i)$$.
 
@@ -107,29 +112,39 @@ $$
 
 特征A对训练数据集D的信息增益$$g(D,A)$$定义为集合D的经验熵$$H(D)$$与特征A给定条件下D的经验条件熵$$H(D|A)$$之差，即
 
+
+
 $$
 g(D,A)=H(D)-H(D|A)
 $$
+
+
 
 一般地，熵$$H(Y)$$与条件熵$$H(Y|X)$$之差称为互信息(mutual information).
 
 
 根据信息增益准则进行特征选择的方法是：对训练数据集D，计算其每个特征的信息增益，并比它们的大小，从而选择信息增益最大的特征。
 
-假设训练数据集为D，样本容量为$$|D|$$,有$$k$$个类别$$C_k$$,$$|C_k|$$为类别$$C_k$$的样本个数。某一特征$$A$$有$$n$$个不同的取值$${a_1,a_2,\cdots,a_n}$$。根据特征A的取值可将数据集D划分为$$n$$个子集$$D_1,D_2,\cdots,D_n$$,$$|D_i|$$为$$D_i$$的样本个数。并记子集$$D_i$$中属于类$$C_k$$的样本的集合为$$D_{ik}$$,$$|D_{ik}|$$为$$D_{ik}$$的样本个数。
+假设训练数据集为D，样本容量为$$|D|$$,有$$k$$个类别$$C_k$$,$$|C_k|$$为类别$$C_k$$的样本个数。某一特征$$A$$有$$n$$个不同的取值$${a_1,a_2,\cdots,a_n}$$。根据特征A的取值可将数据集D划分为$$n$$个子集$$D_1,D_2,\cdots,D_n$$,$$|D_i|$$为$$D_i$$的样本个数。并记子集$$D_i$$中属于类
+$$C_k$$的样本的集合为$$D_{ik}$$,$$|D_{ik}|$$为$$D_{ik}$$的样本个数。
 
 则信息增益的算法如下：
 
 - 输入：训练数据集D和特征A；
 - 输出：特征A对训练数据集D的信息增益$$g(D,A)$$.
 
-- (1) 计算数据集$$D$$的经验熵$$H(D)$$
+- (1) 计算数据集$$D$$的经验熵$$H(D)$$.
+
+
 
 $$
 H(D) = - \sum_{k=1}^{K}\frac{|C_k|}{|D|}log\frac{|C_k|}{|D|}
 $$
 
-- (2) 计算特征A对数据集D的经验条件熵$$H(D|A)$$
+
+- (2) 计算特征A对数据集D的经验条件熵$$H(D|A)$$.
+
+
 
 $$
 H(D|A) = \sum_{i=1}^{n}\frac{|D_i|}{|D|}H(D_i) =  \sum_{i=1}^{n}\frac{|D_i|}{|D|}\sum_{k=1}^{K}\frac{|D_{ik}|}{D_i}log\frac{|D_{ik}|}{D_i}
@@ -137,6 +152,7 @@ $$
 
 
 - (3) 计算信息增益
+
 
 $$
 g(D,A)=H(D)-H(D|A)
@@ -149,9 +165,11 @@ $$
 
 特征A对训练数据集D的信息增益比定义为其信息增益与训练集D关于特征A的值的熵之比，即
 
+
 $$
 g_{R}(D|A) = \frac{g(D,A)}{H_{A}(D)} 
 $$
+
 
 其中，$$H_{A}(D)=-\sum_{i=1}^{n}\frac{|D_i|}{|D|}log\frac{|D_i|}{|D|}$$.
 
@@ -211,6 +229,7 @@ CART算法中，对于回归树，采用的是平方误差最小化准则；对�
 
 假设已将输入空间划分为$$M$$个单元$$R_1,R_2,...,R_M$$,并且在每个单元$$R_m$$上有一个固定的输出值$$c_m$$，于是回归树可以表示为
 
+
 $$
 f(x)=\sum_{m=1}^{M}c_{m}I(x\in R_m)
 $$
@@ -221,15 +240,17 @@ $$
 
 分类问题中，假设有$$K$$个类别，样本点属于第$$k$$类的概率为$$p_k$$,则概率分布的基尼指数定义为
 
+
 $$
 Gini(p)=\sum_{k=1}^{K}p_{k}(1-p_k)=1-\sum_{k=1}^{K}p_{k}^{2}
 $$
 
 
-<center>
-    <p><img src="https://raw.githubusercontent.com/yphuang/yphuang.github.io/figure/2016-04-05-Decision-Tree-Implementation-in-Python/Impurity_Old_Kiwi.jpg " align="center"></p>
-</center>
 
+
+<center>
+    <p><img src="https://raw.githubusercontent.com/yphuang/yphuang.github.io/figure/2016-04-05-Decision-Tree-Implementation-in-Python/Impurity_Old_Kiwi.jpg" align="center"></p>
+</center>
 
 
 
@@ -420,6 +441,7 @@ classify(['(direct)','USA','yes',5],tree)
 方法1存在一个潜在的问题：有可能某一次分支的创建不会令熵有太大的下降，但是随后的子分支却有可能会使得熵大幅降低。因此，我们更倾向于采用剪枝的方法。
 
 决策树的剪枝通过极小化决策树整体的损失函数来实现。在提高信息增益的基础上，通过对模型的复杂度$$T$$施加惩罚，便得到了损失函数的定义：
+
 
 $$
 C_{\alpha}(T) = \sum_{t=1}^{|T|}N_{t}H_{t}(T)+\alpha |T|
